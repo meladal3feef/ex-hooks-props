@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+*{
+  margin:0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: black;
   color: white;
 }
+.nav-menu{
+  display: flex;
+  gap: 20px;
+  padding-right: 1%;
+}
+.logo{
+  background-color: black;
+  height:50px;
+}
+button{
+  height: 35px;
+  width: 75px;
+  color: white;
+  background-color: black;
+  border: none;
+}
+.btnd{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
+}
+button>div{
+height: 32px;
+border: 1px solid white;
+padding: 10%;
+}
+.card{
+  border: 1px solid black;
+  width: 400px;
+  border-radius: 5px 5px 0 0;
 
-.App-link {
-  color: #61dafb;
+}
+.card-img{
+  height: 200px;
+  width: 396px;
+  border-radius: 5px 0;
+}
+.dd{
+  position: relative;
+  text-align: center;
+}
+.tours{
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-@keyframes App-logo-spin {
+.title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: larger;
+  font-weight: bolder;
+  color: orange;
+    text-shadow: 2px 4px 4px rgb(250, 250, 250);
+}
+.info{
+  height: 100px;
+  overflow: hidden;
+  margin: 2%;
+}
+.info>p{
+  height: 100%;
+  text-align: start;
+  
+  /* animation properties */
+  -moz-transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  
+  -moz-animation: my-animation 5s linear infinite;
+  -webkit-animation: my-animation 5s linear infinite;
+  animation: my-animation 5s linear infinite;
+}
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateY(100%); }
+  to { -moz-transform: translateY(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateY(100%); }
+  to { -webkit-transform: translateY(-100%); }
+}
+
+@keyframes my-animation {
   from {
-    transform: rotate(0deg);
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
   }
   to {
-    transform: rotate(360deg);
+    -moz-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
   }
 }
